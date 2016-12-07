@@ -7,7 +7,7 @@ Installation
 download jenkins.xx.war, there are two ways to start jenkins server
 
 1. `java -jar jenkins.xxx.war` start jenkins.xx.war using its own built-in servlet container
-2. put jenkins.xxx.war inside tomcat webapp folder, start tomcat, by default, you will not be able to restart the jenkins using http://localhost:8080/jenkins/restart, if you want to to restart it, you need to restart the tomcat
+2. put jenkins.xxx.war inside tomcat webapp folder, start tomcat, by default, you will not be able to restart the jenkins using `http://localhost:8080/jenkins/restart`, if you want to to restart it, you need to restart the tomcat
 
 after the jenkins server is fully loaded and started, `.jenkins` folder will be created, this is the home directory of the jenkins server, all the jobs and workspaces will be under this directory
 
@@ -32,6 +32,7 @@ Build Triggers are quite flexible, indicating whether the job need to be built p
 Plugins
 -------
 there are a lot of useful plugins available in the public plugins markets
+
     - junit realtime test report plugin
     - static code analysis plugin
     - sonarCube plugin
@@ -57,15 +58,17 @@ each slave runs a separate program called 'slave agent', there is no need to ins
 Server Maintenance
 ------------------
 basic activities to carry out for Jenkins server maintanance best practices
-1. shutdown jenkins => http://localhost:8080/jenkins/exit
-2. restart jenkins => http://localhost:8080/jenkins/restart
-3. reload jenkins configration => http://localhost:8080/jenkins/reload
-4. setup jenkins server on the partition with mist free disk-space (taking src code and build)
-   - write cronjobs or maintenance tasks that carry out clean-up operations
+
+    1. shutdown jenkins => http://localhost:8080/jenkins/exit
+    2. restart jenkins => http://localhost:8080/jenkins/restart
+    3. reload jenkins configration => http://localhost:8080/jenkins/reload
+    4. setup jenkins server on the partition with mist free disk-space (taking src code and build)
+       + write cronjobs or maintenance tasks that carry out clean-up operations
 
 backup activity
-1.used to backup critical configuration settings related to jenkins
-2. backup manager -> setup -> set the backup directory -> backup hudson configuration
+
+    1.used to backup critical configuration settings related to jenkins
+    2. backup manager -> setup -> set the backup directory -> backup hudson configuration
 
 Cronjobs
 --------
@@ -125,6 +128,7 @@ if it is a Maven Project, need to add `invoke top-level maven targets` as build-
 delivery pipeline plugin installation (this will install all the dependent plugins as well)
 
 restart jenkins server, create a new item under the Delivery Pipeline View
+
     => for settings:
     - check "show static analysis results"
     - check "show total build time"
