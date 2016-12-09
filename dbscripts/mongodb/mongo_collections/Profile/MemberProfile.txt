@@ -1,0 +1,2 @@
+db.ScriptTracker.insert( { "ScriptName" : "MemberProfile.txt", "ScriptExecutionDate" : new Date(), "scriptExecutedBy" : "Admin", "comments" : "Initial Data Load" });
+db.MemberProfile.insert({});

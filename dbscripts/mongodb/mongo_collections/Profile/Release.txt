@@ -1,0 +1,2 @@
+db.ScriptTracker.insert( { "ScriptName" : "Release.txt", "ScriptExecutionDate" : new Date(), "scriptExecutedBy" : "Admin", "comments" : "Initial Setup" }); 
+db.Release.insert({ "releaseVersion" : "R1", "sprintVersion" :"S1", "createdBy" : "Admin", "createdDate" : new Date() });

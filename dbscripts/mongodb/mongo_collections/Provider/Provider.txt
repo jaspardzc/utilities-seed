@@ -1,0 +1,2 @@
+db.ScriptTracker.insert( { "ScriptName" : "Provider.txt", "ScriptExecutionDate" : new Date(), "scriptExecutedBy" : "Admin", "comments" : "Initial Data Load" });
+db.Provider.insert({});

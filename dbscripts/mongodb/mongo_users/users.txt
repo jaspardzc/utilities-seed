@@ -1,0 +1,101 @@
+use Profile;
+db.test.insert({"scriptName" : "test"});
+db.createUser ( {
+                "user" : "devadmin",
+                "pwd" : "devadmin123",
+                "roles" : [
+                                { "role" : "dbOwner", "db" : "Profile" }
+                ]
+} );
+db.createUser ( {
+                "user" : "devprofile",
+                "pwd" : "admin123",
+                "roles" : [
+                                { "role" : "readWrite", "db" : "Profile" }
+                ]
+} );
+
+use Preference;
+db.test.insert({"scriptName" : "test"});
+db.createUser ( {
+                "user" : "devadmin",
+                "pwd" : "devadmin123",
+                "roles" : [
+                                { "role" : "dbOwner", "db" : "Preference" }
+                ]
+} );
+db.createUser ( {
+                "user" : "devpreference",
+                "pwd" : "admin123",
+                "roles" : [
+                                { "role" : "readWrite", "db" : "Preference" }
+                ]
+} );
+
+use Notification;
+db.test.insert({"scriptName" : "test"});
+db.createUser ( {
+                "user" : "devadmin",
+                "pwd" : "devadmin123",
+                "roles" : [
+                                { "role" : "dbOwner", "db" : "Notification" }
+                ]
+} );
+db.createUser ( {
+                "user" : "devnotification",
+                "pwd" : "admin123",
+                "roles" : [
+                                { "role" : "readWrite", "db" : "Notification" }
+                ]
+} );
+
+use Provider;
+db.test.insert({"scriptName" : "test"});
+db.createUser ( {
+                "user" : "devadmin",
+                "pwd" : "devadmin123",
+                "roles" : [
+                                { "role" : "dbOwner", "db" : "Provider" }
+                ]
+} );
+db.createUser ( {
+                "user" : "devprovider",
+                "pwd" : "admin123",
+                "roles" : [
+                                { "role" : "readWrite", "db" : "Provider" }
+                ]
+} );
+
+use Document;
+db.test.insert({"scriptName" : "test"});
+db.createUser ( {
+                "user" : "devadmin",
+                "pwd" : "devadmin123",
+                "roles" : [
+                                { "role" : "dbOwner", "db" : "Document" }
+                ]
+} );
+db.createUser ( {
+                "user" : "devdocument",
+                "pwd" : "admin123",
+                "roles" : [
+                                { "role" : "readWrite", "db" : "Document" }
+                ]
+} );
+
+use Audit;
+db.test.insert({"scriptName" : "test"});
+db.createUser ( {
+                "user" : "devadmin",
+                "pwd" : "devadmin123",
+                "roles" : [
+                                { "role" : "dbOwner", "db" : "Audit" }
+                ]
+} );
+db.createUser ( {
+                "user" : "devaudit",
+                "pwd" : "admin123",
+                "roles" : [
+                                { "role" : "readWrite", "db" : "Audit" }
+                ]
+} );
