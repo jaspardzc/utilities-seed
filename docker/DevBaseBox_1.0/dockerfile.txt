@@ -1,0 +1,11 @@
+FROM debian:7.11
+RUN echo "root:root" | chpasswd \
+&& apt-get update && apt-get -y install sudo tar zip unzip openssl openssh-server rsync git \
+&& ssh-keygen -A -P '' \
+&& groupadd -g 750 devadmin && useradd -m -d /home/devadmin -u 750 -g 750 -p devadmin devadmin \
+&& mkdir /tzf && chown devadmin:devadmin /tzf \
+&& mkdir /tzfext && chown devadmin:devadmin /tzfext \
+&& mkdir /backup && chown devadmin:devadmin /backup
+USER devadmin
+WORKDIR /home/devadmin
+CMD ["/bin/bash"]
